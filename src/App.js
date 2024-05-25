@@ -45,7 +45,7 @@ function App() {
       {authenticated && (
         <div>
           <div className="header-container">
-              <h1 className='appHeading'>Hii {userName}!!</h1>
+              <h1 className='appHeading'>Hii {userName}</h1>
               <button onClick={handleLogout}>Logout</button>
           </div>
           <CreatePlaylist accessToken={accessToken} setPlaylistId={setSpotifyPlaylistId} user_id={userId} />
