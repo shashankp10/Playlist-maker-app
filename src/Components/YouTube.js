@@ -6,8 +6,15 @@ export default function YouTube({ ACCESS_TOKEN, spotifyPlaylistId }) {
   const [videoTitles, setVideoTitles] = useState([]);
   const [playlistId, setPlaylistId] = useState('');
 
+  const extractPlaylistId = (url) => {
+    const match = url.match(/(?:list=)([^&]+)/);
+    return match ? match[1] : '';
+  };
+
   const handleInputChange = (event) => {
-    setPlaylistId(event.target.value);
+    const inputValue = event.target.value;
+    const extractedPlaylistId = extractPlaylistId(inputValue);
+    setPlaylistId(extractedPlaylistId);
   };
 
   const handleSubmit = (event) => {
@@ -109,7 +116,7 @@ export default function YouTube({ ACCESS_TOKEN, spotifyPlaylistId }) {
             type="text"
             value={playlistId}
             onChange={handleInputChange}
-            placeholder="Enter YouTube PlaylistID"
+            placeholder="Enter YouTube Playlist URL or ID"
           />
           <button type="submit">Submit</button>
         </form>

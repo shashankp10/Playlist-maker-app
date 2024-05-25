@@ -3,7 +3,7 @@ import '../Stylesheets/SpotifyAuth.css';
 
 
 const CLIENT_ID = '300afc452e364634b226c94cb7401877';
-const REDIRECT_URI = 'https://playlist-maker-woad.vercel.app/redirect';   //http://localhost:3000
+const REDIRECT_URI = 'https://playlist-maker-woad.vercel.app/redirect';   //http://localhost:3000   https://playlist-maker-woad.vercel.app/redirect
 const AUTH_ENDPOINT = 'https://accounts.spotify.com/authorize';
 const RESPONSE_TYPE = 'token';
 const SCOPES = [
