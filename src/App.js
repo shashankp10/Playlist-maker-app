@@ -22,7 +22,7 @@ function App() {
         const data = await response.json();
         setUserName(data.display_name);
         setUserId(data.id);
-        setAuthenticated(true); // Set authenticated to true once user profile is fetched
+        setAuthenticated(true); 
       } catch (error) {
         console.error('Error fetching user profile:', error);
       }
@@ -32,11 +32,11 @@ function App() {
       fetchUserProfile();
     }
   }, [accessToken]);
-
+  
   const handleLogout = () => {
     setAccessToken("");
     window.localStorage.removeItem("token");
-    window.location.reload(); // Refresh the page
+    window.location.reload(); 
   };
 
   return (

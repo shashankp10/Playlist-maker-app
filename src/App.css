@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Varela+Round&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Comfortaa:wght@300..700&family=Poetsen+One&family=Varela+Round&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .header-container {
@@ -12,13 +18,14 @@
     align-items: center;
     width: 100%;
     padding: 1em;
+    flex-wrap: wrap;
 }
 
 .appHeading {
     margin: 0;
     flex: 1; 
     text-align: center; 
-    font-size: 4em;
+    font-size: 2.5em;
     color: #1DB954;
     font-family: "Poetsen One", sans-serif;
     font-weight: 400;
@@ -39,4 +46,10 @@
 
 .header-container button:hover {
     background-color: #1ed760;
+}
+
+@media (min-width: 768px) {
+    .appHeading {
+        font-size: 4em;
+    }
 }

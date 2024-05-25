@@ -7,16 +7,16 @@
     align-items: center;
     padding-top: 20px;
     color: white;
+    flex-wrap: wrap;
 }
 
 .youtube {
     text-align: center;
-    width: 80%;
-    max-width: 600px;
     background-color: rgba(31, 29, 29, 0.8);
     padding: 2em;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(172, 167, 167, 0.5); 
+    max-width: 90%;
 }
 
 .youtube h1 {
@@ -84,4 +84,33 @@
 
 .youtube li button:hover {
     background-color: #1ed760;
+}
+
+@media (max-width: 768px) {
+    .youtube {
+        padding: 1em;
+        align-items: center;
+    }
+
+    .youtube h1 {
+        font-size: 1.5em;
+    }
+
+    .youtube input {
+        width: 100%;
+    }
+
+    .youtube button {
+        padding: 10px;
+        align-items: center;
+    }
+
+    .youtube li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .youtube li button {
+        margin-top: 0.5em;
+    }
 }
